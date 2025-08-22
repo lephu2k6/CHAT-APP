@@ -40,9 +40,10 @@ Hỗ trợ gửi tin nhắn, hình ảnh và quản lý người dùng.
 
 ##  Cài đặt
 
-### 1. Clone repo
+
 
 ```bash
+### 𝟏. 𝐂𝐥𝐨𝐧𝐞 𝐫𝐞𝐩𝐨
 https://github.com/lephu2k6/CHAT-APP.git
 cd CHAT-APP
 
