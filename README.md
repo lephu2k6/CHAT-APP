@@ -47,6 +47,7 @@ https://github.com/lephu2k6/CHAT-APP.git
 cd CHAT-APP
 
 ### 2. Cài đặt Dependencies
+```bash
 # Frontend
 cd frontend
 npm install
@@ -56,6 +57,7 @@ cd ../backend
 npm install
 
 ### 3.Khởi chạy Server
+```bash
 # Backend
 npm run dev
 
