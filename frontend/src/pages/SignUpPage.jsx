@@ -6,12 +6,12 @@ const SignUpPage = () => {
   const { signup, isSigningUp } = useAuthStore();
   const [showPassword ,setShowPassword ] = useState(false)
   const [formData,setFormData] = useState({
-    fullname : '' , 
+    fullName : '' , 
     password : '' , 
     email : ''
   })
   const validForm = () => {
-    if (!formData.fullname.trim()) return toast.error('Vui lòng nhập họ tên');
+    if (!formData.fullName.trim()) return toast.error('Vui lòng nhập họ tên');
     if (!formData.email.trim()) return toast.error('Vui lòng nhập email');
     if (!formData.password.trim()) return toast.error('Vui lòng nhập mật khẩu');
     return true;
@@ -42,8 +42,8 @@ const SignUpPage = () => {
 
           <input
             type='text'
-            name='fullname'
-            value={formData.fullname}
+            name='fullName'
+            value={formData.fullName}
             onChange={handleChange}
             placeholder='Name'
             className='w-full p-2 border mb-4'

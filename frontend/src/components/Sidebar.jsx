@@ -4,7 +4,7 @@ import SidebarSkeleton from "./skeletons/SidebarSkeleton";
 import { useAuthStore } from "../store/useAuthStore";
 
 const Sidebar = () => {
-  const { getUsers, users, selectedUser, setSelected, isUsersLoading } = useChatStore();
+  const { getUsers, users, selectedUser, setSelectedUser, isUsersLoading } = useChatStore();
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -13,7 +13,6 @@ const Sidebar = () => {
   const {onlineUsers} = useAuthStore() ; 
 
   const userList = Array.isArray(users) ? users : Object.values(users || {});
-  console.log(userList)
 
   
   const filteredUsers = userList.filter((user) =>
@@ -52,7 +51,7 @@ const Sidebar = () => {
                   ? "bg-blue-100"
                   : "bg-white"
               }`}
-              onClick={() => setSelected(user)}
+              onClick={() => setSelectedUser(user)}
             >
               {/* Avatar */}
               <div className="h-10 w-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-600">

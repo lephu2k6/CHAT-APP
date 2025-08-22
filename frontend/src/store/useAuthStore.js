@@ -1,5 +1,6 @@
 import {create} from 'zustand'
 import {axiosInstance} from '../lib/axios'
+
 import { Toaster, toast } from 'react-hot-toast';
 import {io} from 'socket.io-client'
 
@@ -15,7 +16,6 @@ export const useAuthStore = create((set , get) => ({
     socket : null ,
 
 
-    //action 
     checkAuth : async () => {
         try {
             const res = await axiosInstance.get('/auth/check')
