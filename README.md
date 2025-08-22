@@ -46,7 +46,7 @@ Hỗ trợ gửi tin nhắn, hình ảnh và quản lý người dùng.
 https://github.com/lephu2k6/CHAT-APP.git
 cd CHAT-APP
 
-### 2. Cài đặt Dependencies
+### 𝟐. 𝐂𝐚̀𝐢 đ𝐚̣̆𝐭 𝐃𝐞𝐩𝐞𝐧𝐝𝐞𝐧𝐜𝐢𝐞𝐬
 ```bash
 # Frontend
 cd frontend
@@ -56,7 +56,7 @@ npm install
 cd ../backend
 npm install
 
-### 3.Khởi chạy Server
+### 𝟯.𝗞𝗵𝗼̛̉𝗶 𝗰𝗵𝗮̣𝘆 𝗦𝗲𝗿𝘃𝗲𝗿
 ```bash
 # Backend
 npm run dev
