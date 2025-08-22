@@ -23,7 +23,7 @@ Hỗ trợ gửi tin nhắn, hình ảnh và quản lý người dùng.
 ### Chat thời gian thực
 ![Chat screen](frontend/src/assets/chat.png)
 
-### Demo gửi tin nhắn (GIF)
+### Profile !!!
 ![Chat demo](frontend/src/assets/info.png)
 
 ---
@@ -46,6 +46,7 @@ Hỗ trợ gửi tin nhắn, hình ảnh và quản lý người dùng.
 https://github.com/lephu2k6/CHAT-APP.git
 cd CHAT-APP
 
+### 2. Cài đặt Dependencies
 # Frontend
 cd frontend
 npm install
@@ -54,6 +55,7 @@ npm install
 cd ../backend
 npm install
 
+### 3.Khởi chạy Server
 # Backend
 npm run dev
 
