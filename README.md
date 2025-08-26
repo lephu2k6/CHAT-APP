@@ -9,8 +9,6 @@ Hỗ trợ gửi tin nhắn, hình ảnh và quản lý người dùng.
 
 - Gửi/nhận tin nhắn thời gian thực
 - Hỗ trợ gửi hình ảnh
-- Quản lý danh sách người dùng
-- Chat riêng tư và nhóm (nếu có)
 - Giao diện responsive, tối ưu cho desktop và mobile
 
 ---
