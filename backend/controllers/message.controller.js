@@ -56,8 +56,19 @@ const sendMessage = async(req,res) => {
         )
         
         await newMessage.save()
-        const receiverSocketId = getReceiverSocketId(receiverId)
-        
+        const { io } = require('../config/socket');
+        const receiverSocketId = getReceiverSocketId(receiverId);
+        // Emit to receiver if online
+        if (receiverSocketId) {
+            io.to(receiverSocketId).emit('newMessage', newMessage);
+            console.log('Emit newMessage to receiver:', receiverSocketId);
+        }
+        // Emit to sender (for instant update)
+        const senderSocketId = getReceiverSocketId(senderId);
+        if (senderSocketId) {
+            io.to(senderSocketId).emit('newMessage', newMessage);
+            console.log('Emit newMessage to sender:', senderSocketId);
+        }
         res.status(200).json(newMessage)
 
         

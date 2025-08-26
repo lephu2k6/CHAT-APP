@@ -29,9 +29,18 @@ const ChatHeader = () => {
 
         {/* Avatar */}
         <div className="relative">
-          <div className="h-10 w-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-700 font-semibold">
-            {selectedUser?.name?.charAt(0)?.toUpperCase() || "?"}
-          </div>
+          <div className="h-10 w-10 rounded-full overflow-hidden flex items-center justify-center bg-gray-300 text-gray-700 font-semibold">
+  {selectedUser?.profilePic ? (
+    <img
+      src={selectedUser.profilePic}
+      alt={selectedUser?.name || "User"}
+      className="h-full w-full object-cover"
+    />
+  ) : (
+    selectedUser?.name?.charAt(0)?.toUpperCase() || "?"
+  )}
+</div>
+
           {/* Online indicator */}
           {isOnline && (
             <span className="absolute bottom-0 right-0 h-3 w-3 bg-green-500 border-2 border-white rounded-full"></span>

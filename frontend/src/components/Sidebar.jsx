@@ -27,7 +27,7 @@ const Sidebar = () => {
       <div className="p-4 border-b border-gray-200">
         <h2 className="text-xl font-semibold text-gray-800">Chats</h2>
         <p className="text-sm text-gray-500">{userList.length} users</p>
-      </div>
+      </div> 
 
       {/* Search */}
       <div className="p-3">
@@ -53,15 +53,24 @@ const Sidebar = () => {
               }`}
               onClick={() => setSelectedUser(user)}
             >
-              {/* Avatar */}
-              <div className="h-10 w-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-600">
-                {user?.profilePic?.charAt(0)?.toUpperCase() || "?"}
-              </div>
+              <div className="h-10 w-10 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center">
+  {user.profilePic ? (
+    <img
+      src={user.profilePic}
+      alt={user.fullName}
+      className="h-full w-full object-cover"
+    />
+  ) : (
+    <span className="text-gray-600 font-bold">
+      {user.fullName?.charAt(0).toUpperCase()}
+    </span>
+  )}
+</div>
 
               {/* Info */}
               <div className="ml-3">
                 <p className="text-sm font-medium text-gray-900">
-                  {user?.fullName || "Unknown User"}
+                  {user.fullName || "Unknown User"}
                 </p>
                 {/* <p className="text-xs text-gray-500">
                   {user?.email || "No email"}
